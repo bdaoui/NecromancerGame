@@ -1,0 +1,63 @@
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 50 150px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#start-game{
+    width: 60%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+
+h1{
+    margin: 50px auto;
+}
+
+#canvas{
+    border: 5px solid black;
+    height: 75vh;
+}
+
+#army{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    border: solid black;
+    border-width: 0px 5px 5px 5px;
+    padding: 2%;
+
+    font-weight: 800;
+}
+
+ul{
+    list-style: none;
+    margin: 15px;
+    padding: 0 10px;
+
+}
+
+ul li{
+    margin: 3px;
+}
+
+h2{
+    font-size: 90%;
+    padding: 1%;
+}
+
+span{
+    margin: auto 0%;
+}
