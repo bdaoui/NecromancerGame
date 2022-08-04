@@ -9,33 +9,52 @@
         <section id="start-screen">
             <h1> Heroe's Graveyard</h1>
             <button id="start-game" >Start Game</button>
+            <input type="range" id="speed" name="Game Speed" min="0" max="10">
+            <label for="speed">Speed</label>
         </section>
         
         <section id="game-screen">
             <canvas id="canvas" width="900px" height="500px"></canvas>
-            <div id="army">
-                <span>Necromancer</span>
-                <ul>
-                    <li>Zombie Animal</li>
-                    <li>Zombie Villager</li>
-                    <li>Zombie Troll</li>
+            <section id="status-bar">
 
-                </ul>
+                <div id="army">
+                    <span>Necromancer</span>
+                    <ul>
+                        <li>Zombie Animal</li>
+                        <li>Zombie Villager</li>
+                        <li>Zombie Troll</li>
 
-                <ul>
-                    <li id="animals">0</li>
-                    <li id="villagers">0</li>
-                    <li id="troll">0</li>
+                    </ul>
 
-                </ul>
+                    <ul>
+                        <li id="animals">0</li>
+                        <li id="villagers">0</li>
+                        <li id="trolls">0</li>
 
-            </div>
+                    </ul>
+
+
+                </div>
+                <div id="log">                   
+                     <span id="life"></span>
+                    <h3 id="status"> Let's start with some animals</h3>
+                </div>
+            </section>
+
         </section>
 
         <section id="end-screen">
+            <h1>GAME OVER</h1>
+            <h2>Better Luck Next Time</h2>
 
         </section>
+        <script src="classes.js"></script>
+        
+        <script src="./classes/necromancer.js"></script>
+        <script src="./classes/troll.js"></script>
+
         <script src="main.js"></script>
+
     </body>
 
 
