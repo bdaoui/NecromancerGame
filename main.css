@@ -1,4 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*{
+    font-family: 'Cinzel', serif;
+    
+}
+
+
 body{
 
     display: flex;
@@ -18,6 +26,10 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#start-screen > p{
+
+    font-weight: 600;
 }
 
 input[type=range]{
