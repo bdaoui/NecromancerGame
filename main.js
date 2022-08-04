@@ -11,7 +11,6 @@ gameScreen.style.display = "none";
 endScreen.style.display = "none";
 
 
-
 // Initialize classes 
 
 let forest = new Unit([20, 20], "forest.png", "forest");
