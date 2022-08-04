@@ -119,7 +119,9 @@ function log(placeOfCollision){
 
     let trollMaximae =["These are hard to fell", "They keep regenerating, only fire can kill them", "Zombie animals are completely useless in this fight", "These creatures will serve me well when assaulting the capital", "Immagine if I fed the kind to a zombie troll"]
 
-    
+    let dragonMaximae =["We should open a cat aficionado club, what do you think?", "Ha Ha Ha, I burned even the bed of that cat hater", "Cat are the dragon of mammals, don't you agree?", "Immagine if cats had wings", "No, No Mr Dragon you cannot burn me HA HA HA never gets old", "They had all these hunting dogs and not even a single cat, weird people I tell you", "You should be able to just stroll in now"]
+
+
 
     switch(placeOfCollision){
         case "startPosition":
@@ -140,6 +142,15 @@ function log(placeOfCollision){
 
             break;
 
+        case "dragon":
+            dragon.meeting();
+
+            if(dragon.fire === false){
+                document.querySelector("#status").innerText = dragonMaximae[randomN(dragonMaximae)] ;
+
+            }
+            break;
+
         default: 
         document.querySelector("#status").innerText = "Travelling";
         document.getElementById("life").style.display = "none";
@@ -148,7 +159,7 @@ function log(placeOfCollision){
 }
 
 
-// Determine the speed of the game
+// Determine the speed of the summoning
 
 function speed(){
     let defaultSpeed = 1000;
@@ -204,29 +215,35 @@ function startGame(){
     gameScreen.style.display = "flex";
     endScreen.style.display = "none"; 
     startScreen.style.display = "none"; 
-
-
     // draw things
     allDrawings();
 
-    showLog()
+    //Update Things
+
     update();
+    showLog();
+
 }
+
 
 
 // Every tot seconds it will check for collision and then spawn an encounter
 // Every tot seconds change the log in the status bar 
 
+
 function update(){
     let placeOfCollision = collision();
     encounter(placeOfCollision);
     setTimeout(update, speed());
+
+
 }
+
 
 function showLog(){
     let placeOfCollision = collision();
     log(placeOfCollision);
-    setTimeout(showLog, 500);
+    setTimeout(showLog, 1000);
 
 }
 

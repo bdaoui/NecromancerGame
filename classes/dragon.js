@@ -3,28 +3,32 @@ class Dragon extends Unit{
     constructor(position, img, name){
         super(position, img, name);
         this.anger = false;
+        this.fire = true;
     }
 
     meeting(){
-
-        console.log(this.anger);
-
+ 
+        // if the dragon is not angry, it will just talk
         if(this.anger === false){
-            console.log(this.anger);
             this.question();
-            console.log(this.anger);
         }
 
-        else{
+        // if the dragon has already been angered it will attack the King
+
+        else if(this.fire === true){
             this.attack();
         }
+
+    
     }
     
 
     question(){
-        document.querySelector("#status").innerText = "Cats, or Dogs?"
-        let questions = document.querySelectorAll(".question");
+        document.querySelector("#status").innerText = "Think carefully. Cats or Dogs?"
 
+   
+
+        let questions = document.querySelectorAll(".question");
         questions.forEach(element =>{
             element.style.display = "unset";
         })
@@ -37,17 +41,19 @@ class Dragon extends Unit{
 
     attack(){
         this.anger = true; 
+        this.fire = false;
 
         let questions = document.querySelectorAll(".question");
         questions.forEach(element =>{
             element.style.display = "none";
         })
 
+
         document.querySelector("#status").innerText = "Obviously...What? The King hates cats?"
         king.walls = 0;
 
         fire.dimension = [100, 150];
-        fire.draw();
+        setTimeout(fire.draw(), 50000);
 
     }
 
