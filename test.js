@@ -25,30 +25,39 @@
 //     return result;
 //   }
 
-function isIsogram(str){
-    if(str === ""){
-        return true
-    }
+// function isIsogram(str){
+//     if(str === ""){
+//         return true
+//     }
 
-    let lowerCase = str.toLowerCase();
-    for(i=0; i< lowerCase.length; i++){
+//     let lowerCase = str.toLowerCase();
+//     for(i=0; i< lowerCase.length; i++){
 
 
-        if( lowerCase.indexOf(lowerCase[i]) === lowerCase.lastIndexOf(lowerCase[i])){
-            return true;
-        }
-        else{
-            return false
-        }
-    }
+//         if( lowerCase.indexOf(lowerCase[i]) === lowerCase.lastIndexOf(lowerCase[i])){
+//             return true;
+//         }
+//         else{
+//             return false
+//         }
+//     }
 
-  }
+//   }
 
-  isIsogram("moOse");
-  console.log(isIsogram("moOse"));
+//   isIsogram("moOse");
+//   console.log(isIsogram("moOse"));
 
-  isIsogram("aba");
-  console.log(isIsogram("aba"));
+//   isIsogram("aba");
+//   console.log(isIsogram("aba"));
 
-  isIsogram("isIsogram");
-  console.log(isIsogram("isIsogram"));
+//   isIsogram("isIsogram");
+//   console.log(isIsogram("isIsogram"));
+
+let i;
+
+i > 0 ? console.log("true") : console.log("false");
+
+while(i<=0){
+    i++
+    console.log(i);
+}

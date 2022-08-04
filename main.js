@@ -10,14 +10,17 @@ let endScreen = document.querySelector("#end-screen");
 gameScreen.style.display = "none";
 endScreen.style.display = "none";
 
+
+
 // Initialize classes 
 
 let forest = new Unit([20, 20], "forest.png", "forest");
 let village = new Unit([120, 420], "village.png", "village" );
+let fire = new Unit([400, 120], "fire.png", "fire");
+let troll = new Troll([220, 120], "troll.png", "troll");
+let dragon = new Dragon([820, 20], "dragon.png", "dragon");
+let king = new King([420, 220], "crown.png", "king");
 
-let troll = new Troll([220, 120], "troll.png", "troll", 1000);
-let dragon = new Living([820, 20], "dragon.png", "dragon", 50000);
-let king = new Living([420, 220], "crown.png", "king", 100000);
 
 let necromancer = new Character([20, 220], "necromancer.png");
 
@@ -32,7 +35,7 @@ allThings.push(forest, village, troll, dragon, king);
 document.querySelector("#start-game").onclick = () => startGame(); 
 
 
-// Check controls and call methods to move and summon 
+// Check controls and call methods to move 
 
 document.onkeydown = (event) =>{
     let key = event.code;
@@ -85,7 +88,14 @@ function encounter(placeOfCollision){
 
         case "troll":
             troll.fight();
+            break;
 
+        case "dragon":
+            dragon.meeting();
+            break;
+
+        case "king":
+            king.castle();
             break;
 
     }
@@ -109,6 +119,7 @@ function log(placeOfCollision){
 
     let trollMaximae =["These are hard to fell", "They keep regenerating, only fire can kill them", "Zombie animals are completely useless in this fight", "These creatures will serve me well when assaulting the capital", "Immagine if I fed the kind to a zombie troll"]
 
+    
 
     switch(placeOfCollision){
         case "startPosition":
@@ -198,27 +209,37 @@ function startGame(){
     // draw things
     allDrawings();
 
-
+    showLog()
     update();
 }
 
 
 // Every tot seconds it will check for collision and then spawn an encounter
+// Every tot seconds change the log in the status bar 
 
 function update(){
     let placeOfCollision = collision();
     encounter(placeOfCollision);
-    log(placeOfCollision);
-
     setTimeout(update, speed());
+}
+
+function showLog(){
+    let placeOfCollision = collision();
+    log(placeOfCollision);
+    setTimeout(showLog, 500);
 
 }
 
 
 // End the Game
-function gameOver(){
+function gameOver(status){
     gameScreen.style.display = "none";
     endScreen.style.display = "flex"; 
     startScreen.style.display = "none"; 
+
+    if(status === true){
+        document.querySelector("#end-screen h1").innerText = "YOU WON";
+        document.querySelector("#end-screen h2").innerText = "Good Job";
+    }
 
 }

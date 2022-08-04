@@ -16,13 +16,4 @@ class Unit{
 }
 
 
-class Living extends Unit{
-
-    constructor(position, img, name, lifepool){
-        super(position, img, name);
-        this.lifepool = lifepool;
-    }
-
-
-}
 

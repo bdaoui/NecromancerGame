@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Heroe's Graveyard</title>
+        <title>Necromancer</title>
         <link href="./main.css"  rel="stylesheet" type="text/css" />
     </head>
 
     <body>
+        <audio autoplay  id="playAudio">
+            <source src="./music/base-music.mp3">
+        </audio>
+
         <section id="start-screen">
-            <h1> Heroe's Graveyard</h1>
+            <h1> Necromancer</h1>
             <button id="start-game" >Start Game</button>
             <input type="range" id="speed" name="Game Speed" min="0" max="10">
             <label for="speed">Speed</label>
@@ -38,6 +42,9 @@
                 <div id="log">                   
                      <span id="life"></span>
                     <h3 id="status"> Let's start with some animals</h3>
+                    <button id="option1" class="question">Dog</button>
+                    <button id="option2" class="question">cat</button>
+
                 </div>
             </section>
 
@@ -48,12 +55,16 @@
             <h2>Better Luck Next Time</h2>
 
         </section>
-        <script src="classes.js"></script>
+        <script src="./classes/base.js"></script>
         
         <script src="./classes/necromancer.js"></script>
         <script src="./classes/troll.js"></script>
+        <script src="./classes/dragon.js"></script>
+        <script src="./classes/king.js"></script>
 
         <script src="main.js"></script>
+
+     
 
     </body>
 

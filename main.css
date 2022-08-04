@@ -125,11 +125,15 @@ h2{
  #log span {
     margin: 0%;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: red;
  }
 
+ /* Questions */ 
 
+.question{
+    display: none;
+}
 
 
 /* ENDGAME SCREEN */
