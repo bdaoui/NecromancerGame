@@ -33,6 +33,22 @@ allThings.push(forest, village, troll, dragon, king);
 
 document.querySelector("#start-game").onclick = () => startGame(); 
 
+// Play and stop music
+let playing = 0;
+
+function playMusic() {
+    let audio = document.getElementById("audio");
+    audio.volume = 0.09;
+    if(playing ===0){
+        playing = 1;
+        audio.play();
+    }
+    else{
+        playing = 0;
+        audio.pause();
+    }
+}
+
 
 // Check controls and call methods to move 
 
@@ -112,11 +128,11 @@ function encounter(placeOfCollision){
 // print stuff to the status bar
 
 function log(placeOfCollision){ 
-    let forestMaximae = ["Oh here we are in a forest", "Where are you bamby?", "Come kitty kitty", "They will never expect zombie bees", "why stop at wolves when I can have undead ducks", "These will only work on villagers", "Attacking the village will be easy now", "Even a bear won't do it against a troll", "These can catch villagers, but a troll? I don't think so..."];
+    let forestMaximae = ["Oh here we are in a forest", "I love the first ten minutes of Bambi", "Attacking the village will be easy now", "Come kitty kitty", "They will never expect zombie bees", "Why stop at wolves when I can have undead ducks", "Undead fishes seemed a good idea on paper", "These will only work on villagers", "Attacking the village will be easy now", "Even a bear won't do it against a troll", "These can catch villagers, but a troll? I don't think so..."];
 
-    let villageMaximae = ["I should learn how animate skellies", "I don't get why they even try at this point", "Kill them all", "Now I have another zombie baby brigade", "I should make them bear toarches for me", "These zombie are way smarter than animals, they can use fire!", "Now I want to see how those troll will handle my army", "Trolls are vulnerable to fire", "Killing trolls with villagers will be as easy as killing villagers with beasts"];
+    let villageMaximae = ["I should learn how animate skellies", "I don't get why they even try at this point", "Kill them all", "Now I have another zombie baby brigade", "I should make them bear toarches for me", "These zombie are way smarter than animals, they can use fire!", "Now I want to see how those troll will handle my army", "Trolls are vulnerable to fire", "Killing trolls with villagers will be as easy as killing villagers with beasts", "Only villagers can use fire"];
 
-    let trollMaximae =["These are hard to fell", "They keep regenerating, only fire can kill them", "Zombie animals are completely useless in this fight", "These creatures will serve me well when assaulting the capital", "Immagine if I fed the kind to a zombie troll"]
+    let trollMaximae =["These are hard to fell", "They keep regenerating, only fire can kill them", "Zombie animals are completely useless in this fight", "These creatures will serve me well when assaulting the capital", "Immagine if I fed the King to a zombie troll"]
 
     let dragonMaximae =["We should open a cat aficionado club, what do you think?", "Ha Ha Ha, I burned even the bed of that cat hater", "Cat are the dragon of mammals, don't you agree?", "Immagine if cats had wings", "No, No Mr Dragon you cannot burn me HA HA HA never gets old", "They had all these hunting dogs and not even a single cat, weird people I tell you", "You should be able to just stroll in now"]
 

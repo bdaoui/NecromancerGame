@@ -41,6 +41,15 @@ label{
     font-weight: 600;
 }
 
+input[type=button]{
+    position: relative;
+    right: 46vw;
+    top: 0.5vh;
+
+    font-weight: 600;
+
+}
+
 
 /* Game Screen */
 
@@ -151,6 +160,7 @@ h2{
     margin: 2px;
 
     font-size: 1rem;
+    font-weight: 800;
 }
 
 
