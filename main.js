@@ -33,6 +33,22 @@ allThings.push(forest, village, troll, dragon, king);
 
 document.querySelector("#start-game").onclick = () => startGame(); 
 
+// Play and stop music
+let playing = 0;
+
+function playMusic() {
+    let audio = document.getElementById("audio");
+    audio.volume = 0.09;
+    if(playing ===0){
+        playing = 1;
+        audio.play();
+    }
+    else{
+        playing = 0;
+        audio.pause();
+    }
+}
+
 
 // Check controls and call methods to move 
 

@@ -6,16 +6,17 @@
     </head>
 
     <body>
-        <audio autoplay  id="playAudio">
-            <source src="./music/base-music.mp3">
-        </audio> 
+        <audio id="audio" src="./music/base-music.mp3"></audio>
+        
 
         <section id="start-screen">
+            <input type="button" value="Sound" onclick="playMusic()">
             <h1> Necromancer</h1>
             <p>The necromancer has to ammass an army of the dead strong enough to overthrow the king.</p>
             <button id="start-game" >Start Game</button>
             <input type="range" id="speed" name="Game Speed" min="0" max="10">
             <label for="speed">Speed</label>
+
         </section>
         
         <section id="game-screen">
