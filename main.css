@@ -50,6 +50,21 @@ input[type=button]{
 
 }
 
+#soundBtnInGame{
+    position: relative;
+    left: -16vh;
+    top: -3vh;
+
+    font-size: 0.5rem;
+    font-weight: 600;
+
+    padding: 0% 0%;
+    margin: 0%;
+
+    width: 20%;
+    height: 15%;
+}
+
 
 /* Game Screen */
 
@@ -114,10 +129,13 @@ ul{
     margin: 15px;
     padding: 0 10px;
 
+
 }
 
 ul li{
     margin: 3px;
+
+    width: 40%;
 }
 
 h2{
