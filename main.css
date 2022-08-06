@@ -50,6 +50,13 @@ input[type=button]{
 
 }
 
+
+/*
+
+Sound Btn still not working
+
+*/
+
 #soundBtnInGame{
     position: relative;
     left: -16vh;
